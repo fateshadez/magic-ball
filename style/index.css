@@ -27,8 +27,11 @@ body {
 
 /* Prevent overlapping with header on smaller screens */
 @media (max-height: 800px), (max-width: 600px) {
+  *{
+    font-size: 16px;
+  }
   body {
-    overflow-y: auto; /* enables scroll when keyboard or small viewport */
+    overflow-y: auto;
   }
 }
 
