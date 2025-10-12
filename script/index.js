@@ -67,12 +67,13 @@ darkMode();
 
 // Answers
 const answers = [
-  "Yes",
-  "No",
-  "Maybe",
-  "This one's up to you",
+  "Yes.",
+  "No.",
+  "Maybe.",
+  "This one's up to you.",
   "Sure!",
-  "Naahh",
+  "Naahh.",
+  "Absolutely! Not."
 ];
 randomAnswer = () => {
   return answers[Math.floor(Math.random() * answers.length)];
