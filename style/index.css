@@ -342,22 +342,79 @@ body {
 }
 
 /* Prevent overlapping with header on smaller screens */
-@media (max-width: 800px) {
+@media (max-width: 480px) and (min-height: 600px) {
   .container {
     margin-top: 80px;
     padding: 0 15px;
   }
+
   .question {
-    font-size: 16px;
+    font-size: 0.8rem;
+    width: 90%;
   }
+
   .ball {
     width: 180px;
     height: 180px;
   }
+
   .row {
     padding: 10px 15px;
   }
+
   .clear-answer {
     font-size: 16px;
   }
 }
+
+@media (max-height: 480px) and (max-width: 1000px) {
+  .container {
+    margin-top: 30px;
+    padding: 0 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 340px;
+    gap: 15px;
+  }
+
+  .question {
+    font-size: 0.8rem;
+    width: 60%;
+  }
+
+  .ball {
+    width: 160px;
+    height: 160px;
+  }
+
+  .row {
+    padding: 10px 15px;
+  }
+
+  .clear-answer {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1000px) and (min-height: 500px) {
+  .container {
+    margin-top: 60px;
+    padding: 0 30px;
+    width: 80%;
+  }
+
+  .question {
+    font-size: 0.8rem;
+    width: 70%;
+  }
+
+  .ball {
+    width: 200px;
+    height: 200px;
+  }
+
+  .clear-answer {
+    font-size: 17px;
+  }
+}
+
