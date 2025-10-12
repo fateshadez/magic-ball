@@ -13,16 +13,19 @@ createElement = (tag, parent, className, id, text) => {
 //Body
 const body = document.body;
 
-//Main container
-const container = createElement("div", body, "container");
+//Header
+const header = createElement("div", body, "row");
 
 //Clear button in case you want to watch the ball rotate :)
-const clearAnswerButton = createElement("button", body, "clear-answer");
+const clearAnswerButton = createElement("button", header, "clear-answer");
 clearAnswerButton.textContent = "Clear answer";
 
 //Dark/Light mode button
-const colorModeButton = createElement("button", body, "color-mode");
+const colorModeButton = createElement("button", header, "color-mode");
 colorModeButton.classList.add("fa-moon", "fa-solid");
+
+//Main container
+const container = createElement("div", body, "container");
 
 //Input field
 const question = createElement("input", container, "question");
@@ -74,7 +77,6 @@ const answers = [
 randomAnswer = () => {
   return answers[Math.floor(Math.random() * answers.length)];
 };
-
 
 /*Event listeners*/
 //Toggle dark mode button
