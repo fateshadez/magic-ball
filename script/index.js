@@ -1,4 +1,4 @@
-//A function for more convenient element creation
+// A function for more convenient element creation
 createElement = (tag, parent, className, id, text) => {
   const el = document.createElement(tag);
   if (className) el.classList.add(className);
@@ -8,39 +8,39 @@ createElement = (tag, parent, className, id, text) => {
   return el;
 };
 
-/*DOM elements*/
+/* DOM elements */ 
 
-//Body
+// Body
 const body = document.body;
 
-//Header
+// Header
 const header = createElement("div", body, "row");
 
-//Clear button in case you want to watch the ball rotate :)
+// Clear button in case you want to watch the ball rotate :)
 const clearAnswerButton = createElement("button", header, "clear-answer");
 clearAnswerButton.textContent = "Clear answer";
 
-//Dark/Light mode button
+// Dark/Light mode button
 const colorModeButton = createElement("button", header, "color-mode");
 colorModeButton.classList.add("fa-moon", "fa-solid");
 
-//Main container
+// Main container
 const container = createElement("div", body, "container");
 
-//Input field
+// Input field
 const question = createElement("input", container, "question");
 question.placeholder = "Enter your question..";
 
-//Magic ball
+// Magic ball
 const magicBallWrapper = createElement("div", container, "magic-ball-wrapper");
 const magicBall = createElement("div", magicBallWrapper, "magic-ball");
 magicBall.classList.add("running");
 
-//Hint (Click the ball)
+// Hint (Click the ball)
 const hint = createElement("p", container, "hint");
 hint.textContent = "Click the ball to shake it!";
 
-//Dark mode
+// Dark mode
 let isDarkModeActive = true;
 darkMode = () => {
   if (isDarkModeActive) {
@@ -65,7 +65,7 @@ darkMode = () => {
 };
 darkMode();
 
-//Answers
+// Answers
 const answers = [
   "Yes",
   "No",
@@ -78,20 +78,20 @@ randomAnswer = () => {
   return answers[Math.floor(Math.random() * answers.length)];
 };
 
-/*Event listeners*/
-//Toggle dark mode button
+/* Event listeners */
+// Toggle dark mode button
 colorModeButton.addEventListener("click", () => {
   darkMode();
 });
 
-//Clear the ball's contents
+// Clear the ball's contents
 clearAnswerButton.addEventListener("click", () => {
   magicBall.textContent = "";
   magicBall.classList.add("running");
   magicBall.classList.remove("revert");
 });
 
-//Ball interactions
+// Ball interactions
 let firstTimeoutId;
 let secondTimeoutId;
 magicBall.addEventListener("click", () => {

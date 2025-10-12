@@ -25,19 +25,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Prevent overlapping with header on smaller screens */
-@media (max-height: 800px), (max-width: 600px) {
-  .clear-answer {
-    font-size: 16px;
-  }
-  .question {
-    font-size: 16px;
-  }
-  body {
-    overflow-y: auto;
-  }
-}
-
 .row {
   display: flex;
   width: 100%;
@@ -157,7 +144,7 @@ body {
   transform: rotate(180deg) scale(120%);
 }
 
-/*Condition classes*/
+/* Condition classes */
 .running {
   animation: idle 15s linear infinite running;
 }
@@ -172,7 +159,7 @@ body {
   animation-iteration-count: infinite;
 }
 
-/*Dark mode adjusted for every element*/
+/* Dark mode adjusted for every element */
 .dark-mode {
   background-color: var(--bg-dark);
   color: var(--text-dark);
@@ -198,7 +185,7 @@ body {
 }
 
 /* Animatins */
-/*Ball shaking animation*/
+/* Ball shaking animation */
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -235,7 +222,7 @@ body {
   }
 }
 
-/*Idle spinning animation*/
+/* Idle spinning animation */
 @keyframes idle {
   0% {
     transform: rotate(0deg);
@@ -245,7 +232,7 @@ body {
   }
 }
 
-/*Spinning colors animation*/
+/* Spinning colors animation */
 @keyframes spin {
   0% {
     background: radial-gradient(circle at 10% 10%, #ff6ec7, transparent 60%),
@@ -351,5 +338,26 @@ body {
     background: radial-gradient(circle at 20% 10%, #ff6ec7, transparent 60%),
       radial-gradient(circle at 55% 70%, #6eb5ff, transparent 80%),
       radial-gradient(circle at 80% 90%, #a24ef5, transparent 100%);
+  }
+}
+
+/* Prevent overlapping with header on smaller screens */
+@media (max-width: 800px) {
+  .container {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+  .question {
+    font-size: 16px;
+  }
+  .ball {
+    width: 180px;
+    height: 180px;
+  }
+  .row {
+    padding: 10px 15px;
+  }
+  .clear-answer {
+    font-size: 16px;
   }
 }
