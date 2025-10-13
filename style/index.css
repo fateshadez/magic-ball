@@ -144,6 +144,16 @@ body {
   transform: rotate(180deg) scale(120%);
 }
 
+.clear-answer-light-hover:hover {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.clear-answer-dark-hover:hover {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
 /* Condition classes */
 .running {
   animation: idle 15s linear infinite running;
@@ -417,4 +427,3 @@ body {
     font-size: 17px;
   }
 }
-
