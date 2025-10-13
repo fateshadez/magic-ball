@@ -8,7 +8,7 @@ createElement = (tag, parent, className, id, text) => {
   return el;
 };
 
-/* DOM elements */ 
+/* DOM elements */
 
 // Body
 const body = document.body;
@@ -18,6 +18,7 @@ const header = createElement("div", body, "row");
 
 // Clear button in case you want to watch the ball rotate :)
 const clearAnswerButton = createElement("button", header, "clear-answer");
+clearAnswerButton.classList.add("clear-answer-light-hover");
 clearAnswerButton.textContent = "Clear answer";
 
 // Dark/Light mode button
@@ -59,11 +60,15 @@ darkMode = () => {
   container.classList.toggle("dark-mode-w-border");
   colorModeButton.classList.toggle("dark-mode-sun-icon");
   clearAnswerButton.classList.toggle("dark-mode-w-border");
+  clearAnswerButton.classList.toggle("clear-answer-light-hover");
+  clearAnswerButton.classList.toggle("clear-answer-dark-hover");
   magicBall.classList.toggle("dark-mode-w-border");
   question.classList.toggle("dark-mode-input");
   hint.classList.toggle("dark-mode-no-bg");
 };
 darkMode();
+
+
 
 // Answers
 const answers = [
@@ -73,7 +78,7 @@ const answers = [
   "This one's up to you.",
   "Sure!",
   "Naahh.",
-  "Absolutely! Not."
+  "Absolutely! Not.",
 ];
 randomAnswer = () => {
   return answers[Math.floor(Math.random() * answers.length)];
