@@ -9,6 +9,12 @@
   --text-light: rgb(50, 50, 50);
   --bg-dark: rgb(25, 25, 25);
   --text-dark: whitesmoke;
+  --bg-light-active: rgba(255, 255, 255, 0.7);
+  --bg-dark-active: rgba(25, 25, 25, 0.7);
+  --text-light-active: rgba(50, 50, 50, 0.7);
+  --text-dark-active: rgba(245, 245, 245, 0.7);
+  --border-dark-active: rgba(25, 25, 25, 0.2);
+  --border-light-active: rgba(255, 255, 255, 0.3);
 }
 
 /* DOM elements' classes */
@@ -106,7 +112,6 @@ body {
   text-shadow: 2px 2px 5px black;
   width: 100%;
   max-width: 250px;
-  height: 250px;
   border: 1px solid black;
   border-radius: 100%;
   cursor: pointer;
@@ -144,14 +149,26 @@ body {
   transform: rotate(180deg) scale(120%);
 }
 
-.clear-answer-light-hover:hover {
+.clear-answer-light-pseudo:hover {
   background-color: var(--bg-dark);
   color: var(--text-dark);
 }
 
-.clear-answer-dark-hover:hover {
+.clear-answer-dark-pseudo:hover {
   background-color: var(--bg-light);
   color: var(--text-light);
+}
+
+.clear-answer-light-pseudo:active {
+  background-color: var(--bg-dark-active);
+  border-color: var(--border-dark-active) !important;
+  color: var(--text-dark-active);
+}
+
+.clear-answer-dark-pseudo:active {
+  background-color: var(--bg-light-active);
+  border-color: var(--border-light-active) !important;
+  color: var(--text-light-active);
 }
 
 /* Condition classes */
@@ -184,7 +201,7 @@ body {
 }
 
 .dark-mode-w-border {
-  border-color: var(--text-dark) !important;
+  border-color: var(--text-dark);
   color: var(--text-dark);
 }
 

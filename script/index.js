@@ -60,15 +60,13 @@ darkMode = () => {
   container.classList.toggle("dark-mode-w-border");
   colorModeButton.classList.toggle("dark-mode-sun-icon");
   clearAnswerButton.classList.toggle("dark-mode-w-border");
-  clearAnswerButton.classList.toggle("clear-answer-light-hover");
-  clearAnswerButton.classList.toggle("clear-answer-dark-hover");
+  clearAnswerButton.classList.toggle("clear-answer-light-pseudo");
+  clearAnswerButton.classList.toggle("clear-answer-dark-pseudo");
   magicBall.classList.toggle("dark-mode-w-border");
   question.classList.toggle("dark-mode-input");
   hint.classList.toggle("dark-mode-no-bg");
 };
 darkMode();
-
-
 
 // Answers
 const answers = [
